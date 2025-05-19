@@ -11,8 +11,10 @@ check=${backup_dir%/}
 if [[ ! -d $check/* ]]; then
 	echo "One or more backup files exist as:"
 	display_directories $check
-	read "Would you like to delete any of these [y/n]: " input
+	read -p "Would you like to delete any of these [y/n]: " input
 	read_input $input
 fi
 
 # sudo rsync -avh --progress ~/Documents $backup_dir
+
+
